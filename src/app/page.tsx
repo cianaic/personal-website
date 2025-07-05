@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div className="min-h-screen max-w-2xl mx-auto px-6 py-16 font-mono">
@@ -7,24 +9,24 @@ export default function Home() {
           Software engineer and builder of digital experiences.
         </p>
         <p className="text-sm text-gray-500 dark:text-gray-500 italic">
-          "What did you do during the intelligence explosion?"
-          <span className="block text-xs mt-1">— Credit to Anthropic's Head of Policy</span>
+          &quot;What did you do during the intelligence explosion?&quot;
+          <span className="block text-xs mt-1">— Credit to Anthropic&apos;s Head of Policy</span>
         </p>
       </header>
 
       <nav className="mb-16">
         <ul className="space-y-2 text-sm">
           <li>
-            <a href="/about" className="hover:underline">About</a>
+            <Link href="/about" className="hover:underline">About</Link>
           </li>
           <li>
-            <a href="/projects" className="hover:underline">Projects</a>
+            <Link href="/projects" className="hover:underline">Projects</Link>
           </li>
           <li>
-            <a href="/writing" className="hover:underline">Writing & Notes</a>
+            <Link href="/writing" className="hover:underline">Writing & Notes</Link>
           </li>
           <li>
-            <a href="/contact" className="hover:underline">Contact</a>
+            <Link href="/contact" className="hover:underline">Contact</Link>
           </li>
         </ul>
       </nav>

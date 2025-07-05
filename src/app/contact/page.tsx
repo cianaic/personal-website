@@ -1,15 +1,17 @@
+import Link from 'next/link';
+
 export default function Contact() {
   return (
     <div className="min-h-screen max-w-2xl mx-auto px-6 py-16 font-mono">
       <header className="mb-12">
-        <a href="/" className="text-sm hover:underline mb-8 inline-block">← Back</a>
+        <Link href="/" className="text-sm hover:underline mb-8 inline-block">← Back</Link>
         <h1 className="text-2xl font-bold">Contact</h1>
       </header>
 
       <main className="space-y-8 text-sm">
         <section>
           <p className="mb-6">
-            I'm always interested in connecting with people working on interesting problems. 
+            I&apos;m always interested in connecting with people working on interesting problems. 
             Whether you have a project in mind, want to discuss ideas, or just want to say hello, 
             feel free to reach out.
           </p>
@@ -56,9 +58,9 @@ export default function Contact() {
         <section>
           <h2 className="text-lg font-semibold mb-4">Collaboration</h2>
           <p>
-            I'm open to collaborating on projects that align with my interests in AI, developer tools, 
+            I&apos;m open to collaborating on projects that align with my interests in AI, developer tools, 
             and building systems that enhance human capability. If you have an idea that could benefit 
-            from my expertise, let's talk.
+            from my expertise, let&apos;s talk.
           </p>
         </section>
 

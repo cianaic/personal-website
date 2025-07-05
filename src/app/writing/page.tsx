@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 type Note = {
   id: number;
@@ -69,12 +70,12 @@ export default function Writing() {
   return (
     <div className="min-h-screen max-w-2xl mx-auto px-6 py-16 font-mono">
       <header className="mb-12">
-        <a href="/" className="text-sm hover:underline mb-8 inline-block">← Back</a>
+        <Link href="/" className="text-sm hover:underline mb-8 inline-block">← Back</Link>
         <h1 className="text-2xl font-bold mb-4">Writing & Notes</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">
           As opposed to a traditional blog, this is a collection of links & corresponding notes 
-          I keep to document learnings & opinions. I've installed an upvoting system that has a 
-          corresponding leaderboard - this is mostly for me to bump things I've found most 
+          I keep to document learnings & opinions. I&apos;ve installed an upvoting system that has a 
+          corresponding leaderboard - this is mostly for me to bump things I&apos;ve found most 
           significant while I reflect on my links. Feel free to bump something if you like.
         </p>
       </header>

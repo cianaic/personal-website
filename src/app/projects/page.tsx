@@ -1,8 +1,10 @@
+import Link from 'next/link';
+
 export default function Projects() {
   return (
     <div className="min-h-screen max-w-2xl mx-auto px-6 py-16 font-mono">
       <header className="mb-12">
-        <a href="/" className="text-sm hover:underline mb-8 inline-block">← Back</a>
+        <Link href="/" className="text-sm hover:underline mb-8 inline-block">← Back</Link>
         <h1 className="text-2xl font-bold">Projects</h1>
       </header>
 
