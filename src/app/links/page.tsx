@@ -1,47 +1,20 @@
-export default function LinksPage() {
-  const links = [
-    {
-      id: 1,
-      title: "Anthropic&apos;s Claude",
-      url: "https://claude.ai",
-      date: "2025-01-06",
-      description: "The AI that helped build this website. Incredible capabilities for coding and reasoning."
-    },
-    {
-      id: 2,
-      title: "Patrick Collison&apos;s Website",
-      url: "https://patrickcollison.com",
-      date: "2024-12-20",
-      description: "Inspiration for the clean, minimal design of this site. Great example of content-focused web design."
-    },
-    {
-      id: 3,
-      title: "TinaCMS",
-      url: "https://tina.io",
-      date: "2024-12-15",
-      description: "Powerful Git-based CMS that we used initially. Great for content management but added deployment complexity."
-    },
-    {
-      id: 4,
-      title: "Next.js Documentation",
-      url: "https://nextjs.org/docs",
-      date: "2024-11-30",
-      description: "Comprehensive docs for the React framework powering this site. App Router is a game-changer."
-    }
-  ];
+import { client, linksQuery } from '@/lib/sanity'
+
+export default async function LinksPage() {
+  const links = await client.fetch(linksQuery)
 
   return (
     <div className="p-8 max-w-4xl">
-      <div className="mb-8">
+      <div className="mb-12">
         <h1 className="text-2xl font-medium text-gray-900 mb-2">Links</h1>
         <p className="text-gray-600">Interesting things I&apos;ve found on the internet.</p>
       </div>
       
-      <div className="space-y-6">
-        {links.map((link) => (
-          <article key={link.id} className="group">
+      <div className="space-y-8">
+        {links.map((link: any) => (
+          <article key={link._id} className="group border-b border-gray-100 pb-6">
             <div className="block">
-              <h2 className="text-lg font-medium text-gray-900 mb-1">
+              <h2 className="text-lg font-medium text-gray-900 mb-2">
                 <a 
                   href={link.url} 
                   target="_blank" 
@@ -51,19 +24,49 @@ export default function LinksPage() {
                   {link.title} →
                 </a>
               </h2>
-              <p className="text-sm text-blue-600 mb-1">
+              <p className="text-sm text-blue-600 mb-2 break-all">
                 {link.url}
               </p>
-              <p className="text-sm text-gray-500 mb-2">
-                {new Date(link.date).toLocaleDateString()}
+              <p className="text-sm text-gray-500 mb-3">
+                {new Date(link.publishedAt).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
               </p>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                {link.description}
-              </p>
+              {link.description && (
+                <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                  {link.description}
+                </p>
+              )}
+              {link.tags && link.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {link.tags.map((tag: string, index: number) => (
+                    <span 
+                      key={index} 
+                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </article>
         ))}
       </div>
+
+      {links.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-500">No links yet. Visit your Sanity Studio to create content.</p>
+          <a 
+            href="/studio" 
+            className="text-blue-600 hover:text-blue-800 underline mt-2 inline-block"
+          >
+            Go to Studio
+          </a>
+        </div>
+      )}
     </div>
   );
 }

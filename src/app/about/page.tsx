@@ -40,21 +40,47 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Philosophy</h2>
-          <p className="italic">
-            &quot;What did you do during the intelligence explosion?&quot; — Jack Clark
-          </p>
-          <p className="mt-2">
-            I believe ai is the greatest force multiplier in human history, and will allow one that embraces it to live 10 lives in terms of output. 
+          <h2 className="text-lg font-medium text-gray-900 mb-3">Contact</h2>
+          <p className="mb-4">
+            Feel free to reach out if you&apos;d like to discuss collaborations, ideas, or just chat: cianmcglynn1 at gmail dot com
           </p>
         </div>
 
         <div>
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Contact</h2>
-          <p>
-            Feel free to reach out if you&apos;d like to discuss collaborations, ideas, or just chat 
-            about technology and entrepreneurship: cianmcglynn1 at gmail dot com
-          </p>
+          <h2 className="text-lg font-medium text-gray-900 mb-3">Elsewhere</h2>
+          <div className="flex flex-wrap gap-4">
+            <a 
+              href="https://www.linkedin.com/in/cianmcglynn" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="https://x.com/cian_mcglynn" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              X
+            <a 
+              href="https://www.goodreads.com/cianaic" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Goodreads
+            </a>
+            <a 
+              href="https://letterboxd.com/cianaic/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Letterboxd
+            </a>
+          </div>
         </div>
       </div>
     </div>

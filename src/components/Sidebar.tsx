@@ -5,11 +5,8 @@ import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "About", href: "/about" },
-  { name: "Writing", href: "/writing" },
   { name: "Links", href: "/links" },
-  { name: "Projects", href: "/projects" },
-  { name: "Automations", href: "/automations" },
-  { name: "Contact", href: "/contact" },
+  { name: "Writing", href: "/writing" },
 ];
 
 export default function Sidebar() {
