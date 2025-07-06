@@ -2,14 +2,14 @@ export default function LinksPage() {
   const links = [
     {
       id: 1,
-      title: "Anthropic's Claude",
+      title: "Anthropic&apos;s Claude",
       url: "https://claude.ai",
       date: "2025-01-06",
       description: "The AI that helped build this website. Incredible capabilities for coding and reasoning."
     },
     {
       id: 2,
-      title: "Patrick Collison's Website",
+      title: "Patrick Collison&apos;s Website",
       url: "https://patrickcollison.com",
       date: "2024-12-20",
       description: "Inspiration for the clean, minimal design of this site. Great example of content-focused web design."
@@ -34,7 +34,7 @@ export default function LinksPage() {
     <div className="p-8 max-w-4xl">
       <div className="mb-8">
         <h1 className="text-2xl font-medium text-gray-900 mb-2">Links</h1>
-        <p className="text-gray-600">Interesting things I've found on the internet.</p>
+        <p className="text-gray-600">Interesting things I&apos;ve found on the internet.</p>
       </div>
       
       <div className="space-y-6">
