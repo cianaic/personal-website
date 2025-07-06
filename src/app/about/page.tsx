@@ -24,7 +24,7 @@ export default function About() {
           <ul className="content-list">
             <li>• Artificial intelligence</li>
             <li>• Entrepreneurship / Investing</li>
-            <li>• Biology (synbio, compbio)</li>
+            <li>• Biology </li>
             <li>• Energy</li>
             <li>• Geopolitics</li>
           </ul>
