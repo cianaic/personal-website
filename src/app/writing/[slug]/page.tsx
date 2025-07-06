@@ -4,11 +4,12 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
 interface PostPageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await client.fetch(postQuery, { slug: params.slug })
+  const { slug } = await params
+  const post = await client.fetch(postQuery, { slug })
 
   if (!post) {
     notFound()
