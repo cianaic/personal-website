@@ -21,7 +21,7 @@ export default function Home() {
           <h2 className="text-lg font-medium text-gray-900 mb-3">Recent Work</h2>
           <ul className="space-y-2">
             <li className="flex justify-between items-center">
-              <span>Personal website with TinaCMS</span>
+              <span>Personal website rebuild</span>
               <span className="text-gray-500">2025</span>
             </li>
             <li className="flex justify-between items-center">
