@@ -1,85 +1,45 @@
-import Link from 'next/link';
-
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-2xl mx-auto px-6 py-16 font-mono">
-      <header className="mb-16">
-        <h1 className="text-2xl font-bold mb-4">Cian McGlynn</h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">
-          Software engineer and builder of digital experiences.
-        </p>
-        <p className="text-sm text-gray-500 dark:text-gray-500 italic">
+    <div className="p-8 max-w-4xl">
+      <div className="mb-8">
+        <h1 className="text-2xl font-medium text-gray-900 mb-2">Cian McGlynn</h1>
+        <p className="text-gray-600">Software engineer and entrepreneur.</p>
+        <p className="text-sm text-gray-500 italic mt-4">
           &quot;What did you do during the intelligence explosion?&quot;
-          <span className="block text-xs mt-1">— Credit to Anthropic&apos;s Head of Policy</span>
+          <span className="block text-xs mt-1">— Jack Clark</span>
         </p>
-      </header>
+      </div>
 
-      <nav className="mb-16">
-        <ul className="space-y-2 text-sm">
-          <li>
-            <Link href="/about" className="hover:underline">About</Link>
-          </li>
-          <li>
-            <Link href="/projects" className="hover:underline">Projects</Link>
-          </li>
-          <li>
-            <Link href="/writing" className="hover:underline">Writing & Notes</Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:underline">Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="space-y-6 text-sm leading-relaxed text-gray-700">
+        <p>
+          I&apos;m interested in building tools that enhance human capability, particularly at the intersection 
+          of artificial intelligence and software development. I also co-founded Givedish, a social enterprise 
+          working to tackle food insecurity through restaurant partnerships.
+        </p>
 
-      <main>
-        <section className="mb-12">
-          <h2 className="text-lg font-semibold mb-4">Recent Work</h2>
-          <ul className="space-y-3 text-sm">
-            <li className="flex justify-between">
-              <a href="#" className="hover:underline">Project Alpha</a>
+        <div>
+          <h2 className="text-lg font-medium text-gray-900 mb-3">Recent Work</h2>
+          <ul className="space-y-2">
+            <li className="flex justify-between items-center">
+              <span>Personal website with TinaCMS</span>
               <span className="text-gray-500">2025</span>
             </li>
-            <li className="flex justify-between">
-              <a href="#" className="hover:underline">Open Source Contribution</a>
-              <span className="text-gray-500">2024</span>
+            <li className="flex justify-between items-center">
+              <span>Givedish (3rd place, Trinity LaunchBox 2022)</span>
+              <span className="text-gray-500">2022</span>
             </li>
-            <li className="flex justify-between">
-              <a href="#" className="hover:underline">Research Paper</a>
+            <li className="flex justify-between items-center">
+              <span>Automation framework</span>
               <span className="text-gray-500">2024</span>
             </li>
           </ul>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-lg font-semibold mb-4">Recent Notes</h2>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            As opposed to a traditional blog, this is a collection of links & corresponding notes 
-            I keep to document learnings & opinions.
-          </p>
-          <ul className="space-y-3 text-sm">
-            <li>
-              <a href="#" className="hover:underline">On building in the age of AI</a>
-              <span className="text-gray-500 ml-2">Dec 2024</span>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">Thoughts on modern web architecture</a>
-              <span className="text-gray-500 ml-2">Nov 2024</span>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">Learning in public</a>
-              <span className="text-gray-500 ml-2">Oct 2024</span>
-            </li>
-          </ul>
-        </section>
-      </main>
-
-      <footer className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800">
-        <div className="flex space-x-4 text-sm">
-          <a href="https://github.com" className="hover:underline">GitHub</a>
-          <a href="https://twitter.com" className="hover:underline">Twitter</a>
-          <a href="https://linkedin.com" className="hover:underline">LinkedIn</a>
         </div>
-      </footer>
+
+        <div>
+          <h2 className="text-lg font-medium text-gray-900 mb-3">Contact</h2>
+          <p>Feel free to reach out: cianmcglynn1 at gmail dot com</p>
+        </div>
+      </div>
     </div>
   );
 }
