@@ -32,24 +32,23 @@ export default function WritingClient({ posts }: { posts: Post[] }) {
   if (selectedPost) {
     return (
       <div className="min-h-screen bg-white">
-        <div className="fixed top-4 left-4 z-50">
-          <button
-            onClick={() => setSelectedPost(null)}
-            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-            aria-label="Close"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        
-        <article className="max-w-4xl mx-auto px-6 py-12">
+        <article className="max-w-4xl mx-auto px-6 py-12 relative">
           <header className="mb-12 border-b border-gray-100 pb-8">
             <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full mb-4 capitalize">
-                {selectedPost.category}
-              </span>
+              <div className="flex items-center gap-4 mb-4">
+                <button
+                  onClick={() => setSelectedPost(null)}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  aria-label="Close"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full capitalize">
+                  {selectedPost.category}
+                </span>
+              </div>
               <h1 className="text-4xl font-medium text-gray-900 mb-4 leading-tight">
                 {selectedPost.title}
               </h1>
