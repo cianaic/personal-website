@@ -43,3 +43,30 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--foreground);
   color: var(--background);
 }
+
+/* Links page styling */
+.links-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.links-content li {
+  margin-bottom: 1rem;
+  color: #374151; /* gray-700 */
+  line-height: 1.6;
+}
+
+.links-content li::marker {
+  color: #6b7280; /* gray-500 */
+}
+
+.links-content a {
+  color: #2563eb; /* blue-600 */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.links-content a:hover {
+  color: #1d4ed8; /* blue-700 */
+}
