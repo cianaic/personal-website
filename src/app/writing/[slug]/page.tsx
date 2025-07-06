@@ -1,5 +1,4 @@
-import { client, postQuery } from '@/lib/sanity'
-import PortableText from '@/components/PortableText'
+import { getPostBySlug, getAllPosts } from '@/lib/markdown'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
@@ -9,7 +8,7 @@ interface PostPageProps {
 
 export default async function PostPage({ params }: PostPageProps) {
   const { slug } = await params
-  const post = await client.fetch(postQuery, { slug })
+  const post = await getPostBySlug(slug)
 
   if (!post) {
     notFound()
@@ -43,15 +42,15 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
           
           <div className="flex items-center text-sm text-gray-500 space-x-4">
-            <time dateTime={post.publishedAt}>
-              {new Date(post.publishedAt).toLocaleDateString('en-US', {
+            <time dateTime={post.date}>
+              {new Date(post.date).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
               })}
             </time>
-            {post.estimatedReadingTime && (
-              <span>{post.estimatedReadingTime} min read</span>
+            {post.readingTime && (
+              <span>{post.readingTime} min read</span>
             )}
           </div>
 
@@ -63,9 +62,10 @@ export default async function PostPage({ params }: PostPageProps) {
         </header>
 
         {/* Content */}
-        <div className="prose prose-lg max-w-none">
-          <PortableText content={post.content} />
-        </div>
+        <div 
+          className="prose prose-lg max-w-none prose-headings:font-medium prose-a:text-blue-600 prose-code:text-sm"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
 
         {/* Footer */}
         <footer className="mt-12 pt-8 border-t border-gray-100">
@@ -82,9 +82,9 @@ export default async function PostPage({ params }: PostPageProps) {
 }
 
 export async function generateStaticParams() {
-  const posts = await client.fetch(`*[_type == "post"]{ "slug": slug.current }`)
+  const posts = await getAllPosts()
   
-  return posts.map((post: any) => ({
+  return posts.map((post) => ({
     slug: post.slug,
   }))
 }
