@@ -7,7 +7,6 @@ export default function About() {
 
       <div className="space-y-6">
         <p className="content-text">
-          Generalist 
         </p>
 
         <div>

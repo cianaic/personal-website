@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "studio": "sanity dev"
+    "studio": "sanity dev",
+    "new-essay": "node new-essay.js"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",
