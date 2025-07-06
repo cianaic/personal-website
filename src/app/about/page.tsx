@@ -66,14 +66,6 @@ export default function About() {
               X
             </a>
             <a 
-              href="https://www.strava.com/athletes/cianmcglynn" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Strava
-            </a>
-            <a 
               href="https://www.goodreads.com/cianaic" 
               target="_blank" 
               rel="noopener noreferrer"
