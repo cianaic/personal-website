@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 
 interface Post {
   slug: string
@@ -17,7 +16,7 @@ export default function WritingClient({ posts }: { posts: Post[] }) {
   const [selectedPost, setSelectedPost] = useState<Post | null>(null)
 
   // Group posts by category
-  const groupedPosts = posts.reduce((acc: any, post) => {
+  const groupedPosts = posts.reduce((acc: Record<string, Post[]>, post) => {
     const category = post.category || 'essays'
     if (!acc[category]) acc[category] = []
     acc[category].push(post)
@@ -92,14 +91,14 @@ export default function WritingClient({ posts }: { posts: Post[] }) {
         <p className="text-gray-600">Thoughts on technology, business, and life.</p>
       </div>
       
-      {Object.entries(groupedPosts).map(([category, categoryPosts]: [string, any]) => (
+      {Object.entries(groupedPosts).map(([category, categoryPosts]: [string, Post[]]) => (
         <section key={category} className="mb-12">
           <h2 className="text-lg font-medium text-gray-900 mb-6 border-b border-gray-100 pb-2">
             {categoryLabels[category as keyof typeof categoryLabels] || category}
           </h2>
           
           <div className="space-y-6">
-            {categoryPosts.map((post: any) => (
+            {categoryPosts.map((post: Post) => (
               <article key={post.slug} className="group">
                 <button
                   onClick={() => setSelectedPost(post)}

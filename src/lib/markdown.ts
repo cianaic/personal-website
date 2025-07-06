@@ -47,7 +47,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       content: contentHtml,
       readingTime: Math.ceil(stats.minutes).toString()
     }
-  } catch (error) {
+  } catch {
     return null
   }
 }
@@ -71,7 +71,7 @@ export async function getAllPosts(): Promise<Post[]> {
     return allPosts
       .filter((post): post is Post => post !== null)
       .sort((a, b) => (a.date > b.date ? -1 : 1))
-  } catch (error) {
+  } catch {
     return []
   }
 }
@@ -111,7 +111,7 @@ export async function getMonthlyLinks(): Promise<MonthlyLinks[]> {
       const dateB = new Date(`${b.month} 1, ${b.year}`)
       return dateB.getTime() - dateA.getTime()
     })
-  } catch (error) {
+  } catch {
     return []
   }
 }
