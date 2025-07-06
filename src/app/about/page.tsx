@@ -3,7 +3,6 @@ export default function About() {
     <div className="p-8 max-w-4xl">
       <div className="mb-8">
         <h1 className="text-2xl font-medium text-gray-900 mb-2">About</h1>
-        <p className="text-gray-600">Generalist.</p>
       </div>
 
       <div className="space-y-6 text-sm leading-relaxed text-gray-700">
