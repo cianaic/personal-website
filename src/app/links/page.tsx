@@ -17,7 +17,7 @@ export default async function LinksPage() {
           </h2>
           
           <div 
-            className="prose prose-gray max-w-none prose-ul:list-disc prose-li:marker:text-gray-400 prose-a:text-gray-900 prose-a:underline hover:prose-a:text-gray-600"
+            className="prose prose-gray max-w-none prose-ul:list-disc prose-ul:pl-6 prose-li:marker:text-gray-600 prose-a:text-blue-600 prose-a:underline prose-a:underline-offset-2 hover:prose-a:text-blue-800"
             dangerouslySetInnerHTML={{ __html: monthData.content }}
           />
         </section>
