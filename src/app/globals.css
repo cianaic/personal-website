@@ -44,6 +44,46 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--background);
 }
 
+/* Global page styling consistency */
+.page-container {
+  padding: 2rem;
+  max-width: 64rem; /* 4xl */
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 3rem;
+}
+
+.page-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 500; /* font-medium */
+  color: #111827; /* gray-900 */
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  color: #6b7280; /* gray-500 */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.section-title {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: #111827; /* gray-900 */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f3f4f6; /* border-gray-100 */
+}
+
+.content-text {
+  color: #374151; /* gray-700 */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
 /* Links page styling */
 .links-content ul {
   list-style-type: disc;
@@ -69,4 +109,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .links-content a:hover {
   color: #1d4ed8; /* blue-700 */
+}
+
+/* Consistent link styling across all pages */
+.content-link {
+  color: #2563eb; /* blue-600 */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content-link:hover {
+  color: #1d4ed8; /* blue-700 */
+}
+
+/* Bullet point lists styling */
+.content-list {
+  margin-left: 0;
+  list-style: none;
+}
+
+.content-list li {
+  color: #374151; /* gray-700 */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
 }

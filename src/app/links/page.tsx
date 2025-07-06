@@ -4,15 +4,15 @@ export default async function LinksPage() {
   const monthlyLinks = await getMonthlyLinks()
 
   return (
-    <div className="p-8 max-w-4xl">
-      <div className="mb-12">
-        <h1 className="text-2xl font-medium text-gray-900 mb-2">Links</h1>
-        <p className="text-gray-600">Interesting things I&apos;ve found on the internet.</p>
+    <div className="page-container">
+      <div className="page-header">
+        <h1 className="page-title">Links</h1>
+        <p className="page-description">Interesting things I&apos;ve found on the internet.</p>
       </div>
       
       {monthlyLinks.map((monthData) => (
         <section key={`${monthData.month}-${monthData.year}`} className="mb-12">
-          <h2 className="text-lg font-medium text-gray-900 mb-4">
+          <h2 className="section-title">
             {monthData.month} {monthData.year}
           </h2>
           

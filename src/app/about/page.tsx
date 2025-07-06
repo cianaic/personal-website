@@ -1,28 +1,28 @@
 export default function About() {
   return (
-    <div className="p-8 max-w-4xl">
-      <div className="mb-8">
-        <h1 className="text-2xl font-medium text-gray-900 mb-2">About</h1>
+    <div className="page-container">
+      <div className="page-header">
+        <h1 className="page-title">About</h1>
       </div>
 
-      <div className="space-y-6 text-sm leading-relaxed text-gray-700">
-        <p>
+      <div className="space-y-6">
+        <p className="content-text">
           Generalist 
         </p>
 
         <div>
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Background</h2>
-          <p>
+          <h2 className="section-title">Background</h2>
+          <p className="content-text">
             I studied at Trinity College Dublin, UC Berkeley and Tsinghua University. 
           </p>
-          <p className="mt-2">
+          <p className="content-text">
             From Meath, Ireland. 
           </p>
         </div>
 
         <div>
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Interests</h2>
-          <ul className="space-y-1">
+          <h2 className="section-title">Interests</h2>
+          <ul className="content-list">
             <li>• Artificial intelligence</li>
             <li>• Entrepreneurship / Investing</li>
             <li>• Biology (synbio, compbio)</li>
@@ -32,20 +32,20 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Currently</h2>
-          <p>
+          <h2 className="section-title">Currently</h2>
+          <p className="content-text">
             Currently working on Hack Europe, Forewell (Healthcare AI), Schwarzman Scholarship at Tsinghua, Sherpa? 
           </p>
         </div>
 
         <div>
-          <h2 className="text-lg font-medium text-gray-900 mb-3">Elsewhere</h2>
+          <h2 className="section-title">Elsewhere</h2>
           <div className="flex flex-wrap gap-4">
             <a 
               href="https://www.linkedin.com/in/cianmcglynn" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="content-link"
             >
               LinkedIn
             </a>
@@ -53,7 +53,7 @@ export default function About() {
               href="https://x.com/cian_mcglynn" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="content-link"
             >
               X
             </a>
@@ -61,7 +61,7 @@ export default function About() {
               href="https://www.goodreads.com/cianaic" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="content-link"
             >
               Goodreads
             </a>
@@ -69,7 +69,7 @@ export default function About() {
               href="https://letterboxd.com/cianaic/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
+              className="content-link"
             >
               Letterboxd
             </a>

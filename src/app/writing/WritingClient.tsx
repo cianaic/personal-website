@@ -84,15 +84,15 @@ export default function WritingClient({ posts }: { posts: Post[] }) {
   }
 
   return (
-    <div className="p-8 max-w-4xl">
-      <div className="mb-12">
-        <h1 className="text-2xl font-medium text-gray-900 mb-2">Writing</h1>
-        <p className="text-gray-600">Thoughts on technology, business, and life.</p>
+    <div className="page-container">
+      <div className="page-header">
+        <h1 className="page-title">Writing</h1>
+        <p className="page-description">Thoughts on technology, business, and life.</p>
       </div>
       
       {Object.entries(groupedPosts).map(([category, categoryPosts]: [string, Post[]]) => (
         <section key={category} className="mb-12">
-          <h2 className="text-lg font-medium text-gray-900 mb-6 border-b border-gray-100 pb-2">
+          <h2 className="section-title">
             {categoryLabels[category as keyof typeof categoryLabels] || category}
           </h2>
           
@@ -117,7 +117,7 @@ export default function WritingClient({ posts }: { posts: Post[] }) {
                     )}
                   </p>
                   {post.excerpt && (
-                    <p className="text-gray-700 text-sm leading-relaxed">
+                    <p className="content-text text-sm">
                       {post.excerpt}
                     </p>
                   )}
