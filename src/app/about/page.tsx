@@ -33,7 +33,7 @@ export default function About() {
         <div>
           <h2 className="section-title">Currently</h2>
           <p className="content-text">
-            Currently working on Hack Europe, Forewell (Healthcare AI), Schwarzman Scholarship at Tsinghua, Sherpa? 
+            Currently working on Hack Europe, Forewell (Healthcare AI), Schwarzman Scholarship at Tsinghua 
           </p>
         </div>
 
